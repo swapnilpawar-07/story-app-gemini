@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Story Match</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #eef1f5; }
+    .container { max-width: 800px; background: white; margin: auto; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px #ccc; }
+    h2 { color: #333; }
+    pre { white-space: pre-wrap; line-height: 1.6; background: #f9f9f9; padding: 20px; border-radius: 6px; }
+    .meta { margin-top: 20px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Best Match for: "{{ query }}"</h2>
+    <h3>{{ story.title }}</h3>
+    <pre>{{ story.content }}</pre>
+    <div class="meta">🔍 Relevance Score: <strong>{{ score }}</strong></div>
+    <br>
+    <a href="/query">🔁 Try Another</a> | <a href="/">🏠 Home</a>
+  </div>
+</body>
+</html>
